@@ -1,8 +1,13 @@
-document.getElementById("theme-toggle").addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-});
+const body = document.body;
+const themeToggle = document.getElementById("theme-toggle");
 
-document.getElementById("contact-form").addEventListener("submit", (event) => {
-    event.preventDefault();
-    alert("Thank you for your message!");
+// Add event listener to toggle the theme
+themeToggle.addEventListener("click", () => {
+    body.classList.add("transition");
+
+    // Use a timeout to delay the removal of the class after the animation
+    setTimeout(() => {
+        body.classList.toggle("dark");
+        body.classList.remove("transition");
+    }, 500);
 });
