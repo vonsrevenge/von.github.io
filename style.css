@@ -11,19 +11,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(135deg, black, #1b0033); /* Black to very dark purple */
     font-family: 'Arial', sans-serif;
-    animation: backgroundShift 5s infinite alternate;
-    background: black; /* Fallback color */
-}
-
-/* Background Animation */
-@keyframes backgroundShift {
-    0% {
-        background: black;
-    }
-    100% {
-        background: #1b0033; /* Very dark purple */
-    }
+    color: #a64dff; /* Purple Text */
 }
 
 /* Centered Content */
@@ -32,16 +22,19 @@ body {
     animation: fadeIn 2s ease-in-out;
 }
 
-/* Gradient Text Styling */
-#content h1,
-#content p {
-    background: linear-gradient(90deg, #a64dff, #ff00ff, #a64dff); /* Gradient colors */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientShift 5s infinite alternate; /* Moving gradient animation */
+#content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-/* Smooth Fade-In Animation for Content */
+#content p {
+    font-size: 1rem;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* Smooth Fade-In Animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -50,15 +43,5 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-/* Gradient Animation for Text */
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
     }
 }
