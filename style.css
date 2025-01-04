@@ -12,9 +12,9 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Arial', sans-serif;
-    animation: backgroundGradientShift 5s infinite linear; /* New gradient animation */
-    background: linear-gradient(135deg, black, #1b0033); /* Fallback for static gradient */
-    background-size: 400% 400%; /* Enables smooth gradient movement */
+    background: linear-gradient(135deg, black, #1b0033); /* Diagonal gradient */
+    background-size: 300% 300%; /* Makes the gradient larger for movement */
+    animation: backgroundGradientShift 8s infinite linear; /* Gradient animation */
 }
 
 /* Animated Gradient Background */
@@ -39,10 +39,10 @@ body {
 /* Gradient Text Styling */
 #content h1,
 #content p {
-    background: linear-gradient(90deg, #a64dff, #ff00ff, #a64dff);
+    background: linear-gradient(90deg, #a64dff, #ff00ff, #a64dff); /* Gradient colors */
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientShift 5s infinite alternate;
+    -webkit-text-fill-color: transparent; /* Makes text transparent to show gradient */
+    animation: gradientShift 5s infinite alternate; /* Text gradient animation */
 }
 
 /* Smooth Fade-In Animation for Content */
