@@ -12,28 +12,12 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, black, #1b0033); /* Diagonal gradient */
-    background-size: 300% 300%; /* Makes the gradient larger for movement */
-    animation: backgroundGradientShift 8s infinite linear; /* Gradient animation */
-}
-
-/* Animated Gradient Background */
-@keyframes backgroundGradientShift {
-    0% {
-        background-position: 0% 100%; /* Bottom-right corner */
-    }
-    50% {
-        background-position: 50% 50%; /* Center */
-    }
-    100% {
-        background-position: 100% 0%; /* Top-left corner */
-    }
+    background: linear-gradient(135deg, black, #1b0033); /* Static diagonal gradient */
 }
 
 /* Centered Content */
 #content {
     text-align: center;
-    animation: fadeIn 2s ease-in-out;
 }
 
 /* Gradient Text Styling */
@@ -42,27 +26,4 @@ body {
     background: linear-gradient(90deg, #a64dff, #ff00ff, #a64dff); /* Gradient colors */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* Makes text transparent to show gradient */
-    animation: gradientShift 5s infinite alternate; /* Text gradient animation */
-}
-
-/* Smooth Fade-In Animation for Content */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Gradient Animation for Text */
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
 }
