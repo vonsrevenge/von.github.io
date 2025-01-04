@@ -12,7 +12,8 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Arial', sans-serif;
-    animation: backgroundShift 5s infinite alternate; /* Background animation */
+    animation: backgroundShift 5s infinite alternate;
+    background: black; /* Fallback color */
 }
 
 /* Background Animation */
@@ -36,8 +37,8 @@ body {
 #content p {
     background: linear-gradient(90deg, #a64dff, #ff00ff, #a64dff); /* Gradient colors */
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; /* Makes the text transparent so the gradient shows */
-    animation: gradientShift 5s infinite alternate; /* Adds a subtle animation to the gradient */
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 5s infinite alternate; /* Moving gradient animation */
 }
 
 /* Smooth Fade-In Animation for Content */
