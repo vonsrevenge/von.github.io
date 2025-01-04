@@ -11,9 +11,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, black, #1b0033); /* Black to very dark purple */
     font-family: 'Arial', sans-serif;
     color: #a64dff; /* Purple Text */
+    animation: backgroundShift 5s infinite alternate; /* Animation for the background */
+}
+
+/* Background Animation */
+@keyframes backgroundShift {
+    0% {
+        background: black;
+    }
+    100% {
+        background: #1b0033; /* Very dark purple */
+    }
 }
 
 /* Centered Content */
