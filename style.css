@@ -11,19 +11,37 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(135deg, black, #1b0033); /* Black to very dark purple */
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, black, #1b0033); /* Static diagonal gradient */
+    color: #a64dff; /* Purple Text */
 }
 
 /* Centered Content */
 #content {
     text-align: center;
+    animation: fadeIn 2s ease-in-out;
 }
 
-/* Gradient Text Styling */
-#content h1,
+#content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
 #content p {
-    background: linear-gradient(90deg, #a64dff, #ff00ff, #a64dff); /* Gradient colors */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; /* Makes text transparent to show gradient */
+    font-size: 1rem;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* Smooth Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
