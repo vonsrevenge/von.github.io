@@ -11,9 +11,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, black, #1b0033); /* Black to very dark purple */
     font-family: 'Arial', sans-serif;
-    color: #a64dff; /* Purple Text */
+    animation: backgroundGradientShift 5s infinite linear; /* New gradient animation */
+    background: linear-gradient(135deg, black, #1b0033); /* Fallback for static gradient */
+    background-size: 400% 400%; /* Enables smooth gradient movement */
+}
+
+/* Animated Gradient Background */
+@keyframes backgroundGradientShift {
+    0% {
+        background-position: 0% 100%; /* Bottom-right corner */
+    }
+    50% {
+        background-position: 50% 50%; /* Center */
+    }
+    100% {
+        background-position: 100% 0%; /* Top-left corner */
+    }
 }
 
 /* Centered Content */
@@ -22,19 +36,16 @@ body {
     animation: fadeIn 2s ease-in-out;
 }
 
-#content h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
+/* Gradient Text Styling */
+#content h1,
 #content p {
-    font-size: 1rem;
-    opacity: 0.8;
-    font-style: italic;
+    background: linear-gradient(90deg, #a64dff, #ff00ff, #a64dff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 5s infinite alternate;
 }
 
-/* Smooth Fade-In Animation */
+/* Smooth Fade-In Animation for Content */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -43,5 +54,15 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Gradient Animation for Text */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
     }
 }
