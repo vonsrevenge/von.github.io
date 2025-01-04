@@ -12,12 +12,24 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, black, #1b0033); /* Static diagonal gradient */
+    animation: backgroundShift 5s infinite alternate;
+    background: black; /* Fallback color */
+}
+
+/* Background Animation */
+@keyframes backgroundShift {
+    0% {
+        background: black;
+    }
+    100% {
+        background: #1b0033; /* Very dark purple */
+    }
 }
 
 /* Centered Content */
 #content {
     text-align: center;
+    animation: fadeIn 2s ease-in-out;
 }
 
 /* Gradient Text Styling */
@@ -25,5 +37,28 @@ body {
 #content p {
     background: linear-gradient(90deg, #a64dff, #ff00ff, #a64dff); /* Gradient colors */
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; /* Makes text transparent to show gradient */
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 5s infinite alternate; /* Moving gradient animation */
+}
+
+/* Smooth Fade-In Animation for Content */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Gradient Animation for Text */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }
