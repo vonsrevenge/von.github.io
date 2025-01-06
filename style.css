@@ -14,6 +14,8 @@ body {
     background: linear-gradient(135deg, black, #1b0033); /* Black to very dark purple */
     font-family: 'Arial', sans-serif;
     color: #a64dff; /* Purple Text */
+    text-align: center;
+    padding: 10px; /* Prevent content from hitting screen edges */
 }
 
 /* Centered Content */
@@ -43,5 +45,31 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Media Query for Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    #content h1 {
+        font-size: 2.5rem; /* Smaller heading for tablets */
+    }
+
+    #content p {
+        font-size: 0.9rem; /* Adjust paragraph size */
+    }
+}
+
+/* Media Query for Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    #content h1 {
+        font-size: 2rem; /* Smaller heading for phones */
+    }
+
+    #content p {
+        font-size: 0.8rem; /* Adjust paragraph size */
+    }
+
+    body {
+        padding: 5px; /* More padding for very small devices */
     }
 }
