@@ -74,18 +74,20 @@ header ul li a:hover {
 .content-section {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 1s, transform 1s;
-    padding: 0 20px;
+    padding: 40px 20px; /* Adjusted padding */
 }
 
 .content-section h2 {
     font-size: 3rem;
     margin-bottom: 15px;
+    font-weight: bold; /* Added bold for emphasis */
     text-shadow: 0 0 10px rgba(166, 77, 255, 0.8);
 }
 
@@ -93,6 +95,15 @@ header ul li a:hover {
     font-size: 1.5rem;
     max-width: 800px;
     line-height: 1.6;
+    margin-top: 15px; /* Added spacing */
+    color: #d4aaff; /* Slightly lighter purple for contrast */
+}
+
+/* Section Separator */
+.content-section:not(:last-child) {
+    border-bottom: 1px solid rgba(166, 77, 255, 0.3); /* Subtle divider */
+    padding-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 /* Visible Section Effect */
