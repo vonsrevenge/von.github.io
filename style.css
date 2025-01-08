@@ -7,69 +7,97 @@
 
 /* Body Styling */
 body {
-    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    color: #a64dff;
+    background: linear-gradient(135deg, black, #1b0033);
+    scroll-behavior: smooth;
+}
+
+/* Header Styling */
+header {
+    position: sticky;
+    top: 0;
+    background-color: black;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.nav-links {
     display: flex;
     justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, black, #1b0033); /* Black to very dark purple */
-    font-family: 'Arial', sans-serif;
-    color: #a64dff; /* Purple Text */
-    text-align: center;
-    padding: 10px; /* Prevent content from hitting screen edges */
+    list-style: none;
 }
 
-/* Centered Content */
-#content {
-    text-align: center;
-    animation: fadeIn 2s ease-in-out;
+.nav-links li {
+    margin: 0 15px;
 }
 
-#content h1 {
-    font-size: 3rem;
+.nav-links a {
+    text-decoration: none;
+    color: #a64dff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+/* Welcome Section */
+#welcome {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#welcome h1 {
+    font-size: 3.5rem;
     font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#welcome p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Section Styling */
+main section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+main section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+main section p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: black;
+    color: #ffffff;
+}
+
+footer h2 {
     margin-bottom: 10px;
 }
 
-#content p {
-    font-size: 1rem;
-    opacity: 0.8;
-    font-style: italic;
+footer a {
+    color: #a64dff;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-/* Smooth Fade-In Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Media Query for Tablets (max-width: 768px) */
-@media (max-width: 768px) {
-    #content h1 {
-        font-size: 2.5rem; /* Smaller heading for tablets */
-    }
-
-    #content p {
-        font-size: 0.9rem; /* Adjust paragraph size */
-    }
-}
-
-/* Media Query for Mobile (max-width: 480px) */
-@media (max-width: 480px) {
-    #content h1 {
-        font-size: 2rem; /* Smaller heading for phones */
-    }
-
-    #content p {
-        font-size: 0.8rem; /* Adjust paragraph size */
-    }
-
-    body {
-        padding: 5px; /* More padding for very small devices */
-    }
+footer a:hover {
+    color: #ffffff;
 }
