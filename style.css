@@ -7,97 +7,76 @@
 
 /* Body Styling */
 body {
-    font-family: 'Arial', sans-serif;
-    color: #a64dff;
+    font-family: Arial, sans-serif;
+    color: #fff;
     background: linear-gradient(135deg, black, #1b0033);
     scroll-behavior: smooth;
 }
 
-/* Header Styling */
+/* Navigation */
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
-    background-color: black;
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
     z-index: 1000;
 }
 
-.nav-links {
+header ul {
     display: flex;
     justify-content: center;
     list-style: none;
 }
 
-.nav-links li {
+header ul li {
     margin: 0 15px;
 }
 
-.nav-links a {
+header ul li a {
     text-decoration: none;
     color: #a64dff;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
+    font-weight: bold;
 }
 
-.nav-links a:hover {
-    color: #ffffff;
+header ul li a:hover {
+    color: #fff;
 }
 
 /* Welcome Section */
 #welcome {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 100px 20px;
 }
 
 #welcome h1 {
-    font-size: 3.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-size: 4rem;
+    animation: fadeIn 2s ease-in-out;
 }
 
-#welcome p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Section Styling */
-main section {
-    padding: 80px 20px;
+/* Content Sections */
+.content-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
 }
 
-main section h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+.content-section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-main section p {
-    font-size: 1rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Footer Styling */
+/* Footer */
 footer {
+    padding: 20px;
     text-align: center;
-    padding: 40px 20px;
-    background-color: black;
-    color: #ffffff;
-}
-
-footer h2 {
-    margin-bottom: 10px;
-}
-
-footer a {
-    color: #a64dff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #ffffff;
+    background: rgba(0, 0, 0, 0.9);
 }
