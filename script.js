@@ -1,9 +1,16 @@
-// Highlight the active tab
-const navLinks = document.querySelectorAll(".nav-links a");
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll(".content-section");
 
-navLinks.forEach(link => {
-    link.addEventListener("click", function () {
-        navLinks.forEach(nav => nav.classList.remove("active"));
-        this.classList.add("active");
-    });
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        },
+        { threshold: 0.1 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
 });
