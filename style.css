@@ -1,23 +1,21 @@
 /* General styling for the body */
 body {
     margin: 0;
-    padding: 0 20rem;
+    padding: 0;
     font-family: 'Arial', sans-serif;
-    background: #0b001e; /* Dark purple background */
-    color: #cfa9ff !important; /* Soft purple text */
-    text-align: center;
+    background: #0b001e;
+    color: #cfa9ff;
+    text-align: center; /* Centers all text by default */
 }
 
 /* Header navigation styling */
 header nav ul {
     display: flex;
     justify-content: center;
-    align-items: center;
     list-style: none;
     padding: 1rem 0;
     margin: 0;
-    background-color: #1e0130; /* Darker purple for the nav bar */
-    box-shadow: 0 0 20px #6a0dad; /* Neon-like glow */
+    background-color: #1e0130;
 }
 
 header nav ul li {
@@ -25,33 +23,25 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #cfa9ff !important; /* Soft purple text */
+    color: #cfa9ff;
     text-decoration: none;
     font-size: 1.2rem;
     transition: color 0.3s ease;
-    text-shadow: 0 0 5px #6a0dad, 0 0 10px #6a0dad !important; /* Neon glow effect */
 }
 
 header nav ul li a:hover {
-    color: #ffffff !important;
-    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff !important; /* Stronger glow on hover */
-}
-
-/* Hero section - Welcome text */
-h1 {
-    font-size: 3rem; /* Large and prominent */
-    color: #cfa9ff !important; /* Soft purple */
-    margin-top: 2rem;
-    text-shadow: 0 0 10px #6a0dad, 0 0 20px #6a0dad !important; /* Neon glow for the header */
+    color: #ffffff;
 }
 
 /* Section Styling */
 section {
     margin: 0 auto;
     padding: 2rem 1rem;
-    max-width: 800px;
-    text-align: center;
+    max-width: 800px; /* Limits the width of the content */
+    text-align: center; /* Centers text within sections */
 }
+
+
 
 /* Section Headings */
 section h2 {
