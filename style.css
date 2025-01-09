@@ -1,7 +1,7 @@
 /* General styling for the body */
 body {
     margin: 0;
-    padding: 0;
+    padding: 0 1rem;
     font-family: 'Arial', sans-serif;
     background: #0b001e; /* Dark purple background */
     color: #cfa9ff !important; /* Soft purple text */
