@@ -4,7 +4,7 @@ body {
     padding: 0;
     font-family: 'Arial', sans-serif;
     background: #0b001e; /* Dark purple background */
-    color: #cfa9ff; /* Soft purple text */
+    color: #cfa9ff !important; /* Soft purple text */
     text-align: center;
 }
 
@@ -25,24 +25,24 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #cfa9ff;
+    color: #cfa9ff !important; /* Soft purple text */
     text-decoration: none;
     font-size: 1.2rem;
     transition: color 0.3s ease;
-    text-shadow: 0 0 5px #6a0dad, 0 0 10px #6a0dad; /* Neon glow effect */
+    text-shadow: 0 0 5px #6a0dad, 0 0 10px #6a0dad !important; /* Neon glow effect */
 }
 
 header nav ul li a:hover {
-    color: #ffffff;
-    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff; /* Stronger glow on hover */
+    color: #ffffff !important;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff !important; /* Stronger glow on hover */
 }
 
 /* Hero section - Welcome text */
 h1 {
     font-size: 3rem; /* Large and prominent */
-    color: #ffffff;
+    color: #cfa9ff !important; /* Soft purple */
     margin-top: 2rem;
-    text-shadow: 0 0 10px #6a0dad, 0 0 20px #6a0dad; /* Neon glow for the header */
+    text-shadow: 0 0 10px #6a0dad, 0 0 20px #6a0dad !important; /* Neon glow for the header */
 }
 
 /* Section Styling */
@@ -56,8 +56,8 @@ section {
 /* Section Headings */
 section h2 {
     font-size: 2.5rem;
-    color: #cfa9ff;
-    text-shadow: 0 0 10px #6a0dad, 0 0 15px #6a0dad; /* Neon glow for headings */
+    color: #cfa9ff !important;
+    text-shadow: 0 0 10px #6a0dad, 0 0 15px #6a0dad !important; /* Neon glow for headings */
     margin-bottom: 1rem;
 }
 
@@ -68,7 +68,7 @@ p, ul {
     margin: 0 auto;
     max-width: 800px;
     text-align: center;
-    color: #cfa9ff; /* Soft purple text */
+    color: #cfa9ff !important; /* Soft purple text */
 }
 
 /* List alignment */
@@ -81,11 +81,11 @@ footer {
     text-align: center;
     padding: 2rem 1rem;
     background: #1e0130; /* Dark purple */
-    color: #cfa9ff;
+    color: #cfa9ff !important; /* Soft purple text */
     box-shadow: 0 0 20px #6a0dad; /* Footer glow effect */
 }
 
 footer p {
     font-size: 1.2rem;
-    text-shadow: 0 0 5px #6a0dad, 0 0 10px #6a0dad; /* Subtle neon glow */
+    text-shadow: 0 0 5px #6a0dad, 0 0 10px #6a0dad !important; /* Subtle neon glow */
 }
