@@ -4,7 +4,7 @@ html, body {
     padding: 0;
     font-family: 'Monospace', Monaco;
     height: 100%; /* Ensure the body fills the entire viewport */
-    background: linear-gradient(to bottom, #20063b, #0b001e); /* Gradient background */
+    background: linear-gradient(to bottom, #0b001e, #20063b); /* Gradient background */
     color: #cfa9ff;
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
