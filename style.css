@@ -5,6 +5,7 @@ body {
     font-family: 'Arial', sans-serif;
     background: #0b001e;
     color: #cfa9ff;
+    text-align: center; /* Centers all text by default */
 }
 
 /* Header navigation styling */
@@ -32,45 +33,37 @@ header nav ul li a:hover {
     color: #ffffff;
 }
 
-/* Welcome section */
-#welcome {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: linear-gradient(to bottom, #20063b, #0b001e);
+/* Section Styling */
+section {
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    max-width: 800px; /* Limits the width of the content */
+    text-align: center; /* Centers text within sections */
 }
 
-#welcome h1 {
-    font-size: 3rem;
-    color: #cfa9ff;
-    text-shadow: 0 0 15px #6a0dad;
-}
-
-/* Section headings */
-.content-section h2 {
+/* Headings */
+section h2, #terms h2 {
     font-size: 2.5rem;
-    text-align: center;
     color: #cfa9ff;
     text-shadow: 0 0 8px #6a0dad;
     margin-bottom: 1rem;
+    text-align: center; /* Centers the headings */
 }
 
-/* Paragraph text */
-.content-section p {
+/* Text alignment for paragraphs and lists */
+p, ul {
     font-size: 1.2rem;
     line-height: 1.8;
-    text-align: center;
+    text-align: center; /* Centers the text */
+    margin: 0 auto; /* Ensures centering within the section */
     max-width: 800px;
-    margin: 0 auto 2rem auto;
 }
 
 /* Specific adjustments for Terms and Conditions */
 #terms ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto; /* Centers the list */
 }
 
 #terms ul li {
