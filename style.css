@@ -4,8 +4,7 @@ body {
     padding: 0;
     font-family: 'Arial', sans-serif;
     background: #0b001e;
-    color: #cfa9ff;
-    text-align: center; /* Centers all text by default */
+    color: #cfa9ff; /* Default text color */
 }
 
 /* Header navigation styling */
@@ -23,59 +22,78 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #cfa9ff;
+    color: #cfa9ff; /* Purple color */
     text-decoration: none;
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: #ffffff;
+    color: #ffffff; /* White on hover */
 }
 
-/* Section Styling */
-section {
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    max-width: 800px; /* Limits the width of the content */
-    text-align: center; /* Centers text within sections */
+/* Welcome section */
+#welcome {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom, #20063b, #0b001e);
 }
 
+#welcome h1 {
+    font-size: 3rem;
+    color: #cfa9ff !important; /* Force purple text */
+    text-shadow: 0 0 15px #6a0dad; /* Neon glow */
+}
 
-
-/* Section Headings */
-section h2 {
+/* Section headings */
+.content-section h2 {
     font-size: 2.5rem;
-    color: #cfa9ff !important;
-    text-shadow: 0 0 10px #6a0dad, 0 0 15px #6a0dad !important; /* Neon glow for headings */
+    text-align: center;
+    color: #cfa9ff !important; /* Force purple text */
+    text-shadow: 0 0 8px #6a0dad; /* Neon glow */
     margin-bottom: 1rem;
 }
 
-/* Paragraphs and content alignment */
-p, ul {
+/* Paragraph text */
+.content-section p {
     font-size: 1.2rem;
     line-height: 1.8;
-    margin: 0 auto;
-    max-width: 800px;
     text-align: center;
-    color: #cfa9ff !important; /* Soft purple text */
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    color: #cfa9ff !important; /* Force purple text */
 }
 
-/* List alignment */
-ul {
+/* Specific adjustments for Terms and Conditions */
+#terms ul {
+    list-style: none;
     padding: 0;
+    margin: 0;
+}
+
+#terms ul li {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    color: #cfa9ff !important; /* Force purple text */
+}
+
+#terms ul li strong {
+    font-size: 1.4rem;
+    color: #d7b3ff; /* Light purple for emphasis */
 }
 
 /* Footer styling */
 footer {
     text-align: center;
     padding: 2rem 1rem;
-    background: #1e0130; /* Dark purple */
-    color: #cfa9ff !important; /* Soft purple text */
-    box-shadow: 0 0 20px #6a0dad; /* Footer glow effect */
+    background: #1e0130;
+    color: #cfa9ff !important; /* Force purple text */
 }
 
 footer p {
     font-size: 1.2rem;
-    text-shadow: 0 0 5px #6a0dad, 0 0 10px #6a0dad !important; /* Subtle neon glow */
+    color: #cfa9ff !important; /* Ensure footer text is purple */
 }
