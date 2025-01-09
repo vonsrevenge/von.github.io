@@ -1,11 +1,12 @@
-/* General styling for the body */
-body {
+/* General styling for html and body */
+html, body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
+    height: 100%; /* Ensure the body fills the entire viewport */
     background: linear-gradient(to bottom, #20063b, #0b001e); /* Gradient background */
     color: #cfa9ff;
-    overflow-x: hidden; /* Prevent horizontal scrolling issues */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Header navigation styling */
@@ -40,8 +41,7 @@ header nav ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(to bottom, #20063b, #0b001e); /* Gradient background */
-    padding: 0 1rem; /* Prevents text from sticking to the edge */
+    padding: 0 1rem; /* Prevent text from sticking to the edges */
 }
 
 #welcome h1 {
