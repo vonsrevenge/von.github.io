@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const textElement = document.getElementById("text");
     const textToType = "Welcome to My Portfolio!";
-    const typingSpeed = 50; // Typing speed in milliseconds
+    const typingSpeed = 100; // Typing speed in milliseconds
     const updateBatch = 3; // Update DOM every 3 characters
 
     let currentIndex = 0;
