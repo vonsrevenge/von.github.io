@@ -16,14 +16,33 @@ html, body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Header navigation styling */
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed; /* Keeps it at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it's above other elements */
+    background-color: #1e0130; /* Nav bar background */
+    padding: 1rem;
+}
+
+header nav .left-item {
+    flex: 1; /* Pushes other items to the right */
+    color: #cfa9ff;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
 header nav ul {
     display: flex;
     justify-content: center;
+    flex: 2; /* Ensures centering of options */
     list-style: none;
-    padding: 1rem 0;
+    padding: 0;
     margin: 0;
-    background-color: #1e0130;
 }
 
 header nav ul li {
@@ -37,53 +56,10 @@ header nav ul li a {
     transition: color 0.3s ease;
 }
 
-header nav ul li a:hover {
+section h1 span:hover {
     color: #ffffff;
 }
 
-/* General styling for fixed top bar */
-header nav {
-    position: fixed; /* Make the nav bar fixed */
-    top: 0;
-    left: 0;
-    width: 100%; /* Full width on mobile */
-    z-index: 1000; /* Ensure it's above other elements */
-    background-color: #1e0130; /* Ensure visibility on mobile */
-    padding: 1rem;
-}
-
-/* Adjustments for smaller screens */
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column; /* Stack items vertically */
-        text-align: center; /* Center links */
-        padding: 0;
-    }
-
-    header nav ul li {
-        margin: 0.5rem 0; /* Add spacing between links */
-    }
-
-    #welcome {
-        height: calc(100vh - 80px); /* Ensure it fits below the fixed nav bar */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 0 1rem;
-        margin-top: 80px; /* Adjust for nav bar height */
-    }
-
-    #welcome h1 {
-        font-size: 2rem; /* Smaller font size for smaller screens */
-        word-wrap: break-word; /* Ensure text doesn't overflow */
-    }
-
-    /* Body overflow adjustment for smaller devices */
-    body {
-        overflow-x: hidden;
-    }
-}
 
 /* Welcome section */
 #welcome {
@@ -93,6 +69,9 @@ header nav {
     align-items: center;
     text-align: center;
     padding: 0 1rem; /* Prevent text from sticking to the edges */
+}
+header nav ul li a:hover {
+    color: #ffffff;
 }
 
 #welcome h1 {
@@ -163,7 +142,7 @@ footer p {
 #typewriter {
     display: inline-block; /* Keep text and cursor in the same line */
     font-family: 'custom', sans-serif;
-    font-size: 6rem;
+    font-size: 12rem;
     color: #cfa9ff;
     white-space: nowrap; /* Prevent text wrapping */
     overflow: hidden; /* Hide overflow text */
