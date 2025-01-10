@@ -117,23 +117,20 @@ footer p {
 }
 /* Typewriter container styling */
 #typewriter {
+    display: inline-block; /* Keep text and cursor in the same line */
     font-family: 'custom', sans-serif;
-    font-size: 3rem;
+    font-size: 6rem;
     color: #cfa9ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow text */
     text-shadow: 0 0 15px #6a0dad;
-    white-space: nowrap; /* Prevent wrapping */
-    overflow: hidden;
 }
 
 /* Blinking cursor */
 #cursor {
-    color: #cfa9ff;
+    display: inline-block;
     font-weight: bold;
-    margin-right: 0.5rem; /* Add space between cursor and text */
-    animation: blink 0.7s steps(2, start) infinite;
+    animation: blink 0.6s steps(2, start) infinite;
 }
 
 @keyframes blink {
