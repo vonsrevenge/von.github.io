@@ -1,36 +1,36 @@
 @font-face {
     font-family: 'custom';
-    src: url('custom.ttf') format('truetype'); /* Path to your font file */
-    font-weight: normal; /* Specify font weight if applicable */
-    font-style: normal;  /* Specify font style if applicable */
+    src: url('custom.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-/* General styling for html and body */
+
 html, body {
     margin: 0;
     padding: 0;
     font-family: 'custom', sans-serif;
-    height: 100%; /* Ensure the body fills the entire viewport */
-    background: linear-gradient(to bottom, #0b001e, #20063b); /* Gradient background */
+    height: 100%;
+    background: linear-gradient(to bottom, #0b001e, #20063b);
     color: #cfa9ff;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
 }
 
 header nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed; /* Keeps it at the top */
+    position: fixed; 
     top: 0;
     left: 0;
-    width: 100%; /* Full width */
-    z-index: 1000; /* Ensure it's above other elements */
-    background-color: #1e0130; /* Nav bar background */
+    width: 100%; 
+    z-index: 1000; 
+    background-color: #1e0130;
     padding: 1rem;
 }
 
 header nav .left-item {
-    flex: 1; /* Pushes other items to the right */
+    flex: 1; 
     color: #cfa9ff;
     font-size: 1.2rem;
     text-align: left;
@@ -39,7 +39,7 @@ header nav .left-item {
 header nav ul {
     display: flex;
     justify-content: center;
-    flex: 2; /* Ensures centering of options */
+    flex: 2;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -61,14 +61,13 @@ section h1 span:hover {
 }
 
 
-/* Welcome section */
 #welcome {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 1rem; /* Prevent text from sticking to the edges */
+    padding: 0 1rem;
 }
 header nav ul li a:hover {
     color: #ffffff;
@@ -81,7 +80,6 @@ header nav ul li a:hover {
     margin: 0;
 }
 
-/* Section headings */
 .content-section {
     display: flex;
     flex-direction: column;
@@ -105,7 +103,6 @@ header nav ul li a:hover {
     color: #cfa9ff !important;
 }
 
-/* Specific adjustments for Terms and Conditions */
 #terms ul {
     list-style: none;
     padding: 0;
@@ -116,7 +113,7 @@ header nav ul li a:hover {
     font-size: 1.2rem;
     margin: 1rem 0;
     color: #cfa9ff !important;
-    text-align: center; /* Align text centrally */
+    text-align: center;
 }
 
 #terms ul li strong {
@@ -124,7 +121,6 @@ header nav ul li a:hover {
     color: #d7b3ff;
 }
 
-/* Footer styling */
 footer {
     text-align: center;
     padding: 2rem 1rem;
@@ -138,18 +134,17 @@ footer p {
     color: #cfa9ff !important;
     
 }
-/* Typewriter container styling */
+
 #typewriter {
-    display: inline-block; /* Keep text and cursor in the same line */
+    display: inline-block; 
     font-family: 'custom', sans-serif;
     font-size: 12rem;
     color: #cfa9ff;
-    white-space: nowrap; /* Prevent text wrapping */
-    overflow: hidden; /* Hide overflow text */
+    white-space: nowrap;
+    overflow: hidden;
     text-shadow: 0 0 15px #6a0dad;
 }
 
-/* Blinking cursor */
 #cursor {
     display: inline-block;
     font-weight: bold;
