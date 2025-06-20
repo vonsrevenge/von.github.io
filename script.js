@@ -53,20 +53,20 @@ document.addEventListener("DOMContentLoaded", async () => {
         // Step 5: Build and Send
         const message = {
             content:
-                     `📩 **New Visitor Logged**
-                     🧭 **IP:** ${ip} (${org})
-                     🌍 **Location:** ${city}, ${region}, ${country}
-                     🆔 **Visitor ID:** ${visitorId}
-                     🎯 **Confidence Score:** ${confidence}
-                     🖥️ **Device:** ${deviceType}
-                     🌐 **Browser:** ${browser}
-                     💻 **Platform/OS:** ${platform}
-                     📐 **Screen:** ${screenRes} @${dpr}x
-                     🕰️ **Timezone:** ${timezone}
-                     🗣️ **Language:** ${language}
-                     📄 **Page:** ${page}
-                     🔗 **Referrer:** ${referrer}
-                     ⏱️ **Time on Site:** ${duration}s`
+`📩 **New Visitor Logged**
+🧭 **IP:** ${ip} (${org})
+🌍 **Location:** ${city}, ${region}, ${country}
+🆔 **Visitor ID:** ${visitorId}
+🎯 **Confidence Score:** ${confidence}
+🖥️ **Device:** ${deviceType}
+🌐 **Browser:** ${browser}
+💻 **Platform/OS:** ${platform}
+📐 **Screen:** ${screenRes} @${dpr}x
+🕰️ **Timezone:** ${timezone}
+🗣️ **Language:** ${language}
+📄 **Page:** ${page}
+🔗 **Referrer:** ${referrer}
+⏱️ **Time on Site:** ${duration}s`
         };
 
         await fetch("https://fifth-wirehaired-sunset.glitch.me/log-visitor", {
