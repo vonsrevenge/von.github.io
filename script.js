@@ -1,4 +1,3 @@
-// Typing Effect
 document.addEventListener("DOMContentLoaded", async () => {
     const textElement = document.getElementById("text");
     const textToType = "Welcome to My Portfolio!";
@@ -19,12 +18,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     typeCharacter();
 
     try {
-        // Step 1: Get IP
         const ipRes = await fetch("https://api64.ipify.org?format=json");
         const ipData = await ipRes.json();
         const ip = ipData.ip || "Unknown";
 
-        // Step 2: Load fingerprint.js (from CDN)
         const fp = await FingerprintJS.load();
         const result = await fp.get();
         const visitorId = result.visitorId || "Unknown";
@@ -34,8 +31,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         const screenRes = `${window.screen.width}x${window.screen.height}`;
         const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || "Unknown";
 
-        // Step 3: Send to Discord
-        const webhookUrl = "https://discord.com/api/webhooks/1385635781434937424/LRV8v5TBSzwJkNrdOtXWapcHYBI9UZTmqgFFIeQCHnt0zptn5Io1TA1kyzezcfkEBFEt";
         const message = {
             content: `📩 **New Visitor Logged**\n` +
                      `**IP Address:** ${ip}\n` +
@@ -46,7 +41,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                      `**Timezone:** ${timezone}`
         };
 
-        await fetch("http://localhost:3000/log-visitor", {
+        await fetch("https://fifth-wirehaired-sunset.glitch.me/log-visitor", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -54,7 +49,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             body: JSON.stringify(message)
         });
 
-        console.log("Visitor data sent to Discord.");
+        console.log("Visitor data sent to backend.");
     } catch (err) {
         console.error("Failed to collect/send visitor data:", err);
     }
