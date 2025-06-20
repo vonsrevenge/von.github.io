@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                      `**Timezone:** ${timezone}`
         };
 
-        await fetch(webhookUrl, {
+        await fetch("http://localhost:3000/log-visitor", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
