@@ -1,9 +1,8 @@
-<!-- Include FingerprintJS -->
-<script src="https://fpjscdn.net/v3/fp.min.js"></script>
+<!-- Use Open-Source FingerprintJS -->
+<script src="https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"></script>
 
 <script>
 document.addEventListener("DOMContentLoaded", async () => {
-    // Typing Effect
     const textElement = document.getElementById("text");
     const textToType = "Welcome to My Portfolio!";
     const typingSpeed = 100;
@@ -20,28 +19,25 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     }
 
-    typeCharacter(); // Start typing animation
+    typeCharacter();
 
     try {
-        // Step 1: Get IP address (IPv4 or IPv6)
         const ipRes = await fetch("https://api64.ipify.org?format=json");
-        if (!ipRes.ok) throw new Error("Failed to fetch IP");
         const ipData = await ipRes.json();
         const ip = ipData.ip || "Unknown";
 
-        // Step 2: Get visitor fingerprint
-        const fp = await FingerprintJS.load();
+        // ✅ Using open-source FingerprintJS
+        const fpPromise = FingerprintJS.load();
+        const fp = await fpPromise;
         const result = await fp.get();
 
         const visitorId = result.visitorId || "Unknown";
-        const browser = result.components.userAgent?.value || "Unknown";
-        const platform = result.components.platform?.value || "Unknown";
+        const browser = navigator.userAgent || "Unknown";
+        const platform = navigator.platform || "Unknown";
         const screenRes = `${window.screen.width}x${window.screen.height}`;
         const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || "Unknown";
 
-        // Step 3: Send data to Discord webhook
         const webhookUrl = "https://discord.com/api/webhooks/1385635781434937424/LRV8v5TBSzwJkNrdOtXWapcHYBI9UZTmqgFFIeQCHnt0zptn5Io1TA1kyzezcfkEBFEt";
-
         const message = {
             content: `📩 **New Visitor Logged**\n` +
                      `**IP Address:** ${ip}\n` +
